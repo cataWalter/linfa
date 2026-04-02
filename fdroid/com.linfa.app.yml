@@ -1,0 +1,39 @@
+Categories:
+  - Reading
+License: MIT
+AuthorName: Linfa Contributors
+AuthorEmail: 
+SourceCode: https://github.com/cataWalter/linfa
+IssueTracker: https://github.com/cataWalter/linfa/issues
+Changelog: https://github.com/cataWalter/linfa/releases
+
+AutoName: Linfa
+
+RepoType: git
+Repo: https://github.com/cataWalter/linfa.git
+
+Builds:
+  - versionName: "1.0.0"
+    versionCode: 1
+    commit: "?"
+    subdir: android
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+    output: app/build/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - Flutter@3.24.0
+    prebuild:
+      - export FLUTTER_ROOT=$$Flutter$$
+      - export PATH=$$Flutter$$/bin:$PATH
+      - flutter config --no-analytics
+      - flutter pub get
+    build:
+      - flutter build apk --release
+    ndk: r26
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+UpdateCheckData: "pubspec.yaml|version:\\s.*\\+(\\d+)|.|version:\\s(\\d+\\.\\d+\\.\\d+)\\+"
+CurrentVersion: "1.0.0"
+CurrentVersionCode: 1

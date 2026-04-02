@@ -1,0 +1,182 @@
+[
+  {
+    "name": "Pothos",
+    "scientific_name": "Epipremnum aureum",
+    "watering_frequency_days": 7,
+    "light_requirements": "indirect",
+    "humidity_level": "medium",
+    "difficulty": "easy",
+    "tips": [
+      "Lascia asciugare il terreno tra un'annaffiatura e l'altra",
+      "Tollera condizioni di scarsa luce",
+      "Ottimo per principianti"
+    ],
+    "description": "Il Pothos è una delle piante d'appartamento più resistenti e facili da curare.",
+    "toxic_to_pets": true,
+    "pet_friendly": false,
+    "max_height_cm": 200,
+    "growth_rate": "fast"
+  },
+  {
+    "name": "Monstera Deliciosa",
+    "scientific_name": "Monstera deliciosa",
+    "watering_frequency_days": 7,
+    "light_requirements": "indirect_bright",
+    "humidity_level": "high",
+    "difficulty": "easy",
+    "tips": [
+      "Ama l'umidità ambientale",
+      "Pulisci regolarmente le foglie",
+      "Fornisci un tutore per il supporto"
+    ],
+    "description": "La Monstera è famosa per le sue grandi foglie fenestrate.",
+    "toxic_to_pets": true,
+    "pet_friendly": false,
+    "max_height_cm": 300,
+    "growth_rate": "fast"
+  },
+  {
+    "name": "Sansevieria",
+    "scientific_name": "Sansevieria trifasciata",
+    "watering_frequency_days": 14,
+    "light_requirements": "low",
+    "humidity_level": "low",
+    "difficulty": "easy",
+    "tips": [
+      "Quasi indistruttibile",
+      "Resiste alla siccità",
+      "Purifica l'aria"
+    ],
+    "description": "La Sansevieria è una pianta estremamente resistente e adattabile.",
+    "toxic_to_pets": true,
+    "pet_friendly": false,
+    "max_height_cm": 120,
+    "growth_rate": "slow"
+  },
+  {
+    "name": "Ficus Elastica",
+    "scientific_name": "Ficus elastica",
+    "watering_frequency_days": 7,
+    "light_requirements": "indirect_bright",
+    "humidity_level": "medium",
+    "difficulty": "medium",
+    "tips": [
+      "Sensibile ai cambiamenti di posizione",
+      "Evita correnti d'aria",
+      "Pulisci le foglie regolarmente"
+    ],
+    "description": "Il Ficus Elastica ha belle foglie lucide e coriacee.",
+    "toxic_to_pets": true,
+    "pet_friendly": false,
+    "max_height_cm": 300,
+    "growth_rate": "medium"
+  },
+  {
+    "name": "Succulente",
+    "scientific_name": "Varie",
+    "watering_frequency_days": 14,
+    "light_requirements": "direct",
+    "humidity_level": "low",
+    "difficulty": "easy",
+    "tips": [
+      "Poca acqua, terreno ben drenato",
+      "Tanta luce diretta",
+      "Attenzione ai ristagni d'acqua"
+    ],
+    "description": "Le succulente immagazzinano acqua nelle foglie e richiedono poche cure.",
+    "toxic_to_pets": false,
+    "pet_friendly": true,
+    "max_height_cm": 30,
+    "growth_rate": "slow"
+  },
+  {
+    "name": "Felce",
+    "scientific_name": "Nephrolepis exaltata",
+    "watering_frequency_days": 3,
+    "light_requirements": "indirect",
+    "humidity_level": "high",
+    "difficulty": "medium",
+    "tips": [
+      "Ama l'umidità",
+      "Nebulizza regolarmente",
+      "Evita la luce diretta"
+    ],
+    "description": "Le felci aggiungono un tocco tropicale con il loro fogliame piumoso.",
+    "toxic_to_pets": false,
+    "pet_friendly": true,
+    "max_height_cm": 90,
+    "growth_rate": "medium"
+  },
+  {
+    "name": "Philodendron",
+    "scientific_name": "Philodendron hederaceum",
+    "watering_frequency_days": 7,
+    "light_requirements": "indirect",
+    "humidity_level": "medium",
+    "difficulty": "easy",
+    "tips": [
+      "Crescita rapida",
+      "Perfetto per mensole e cesti appesi",
+      "Lascia asciugare il terreno tra le annaffiature"
+    ],
+    "description": "Il Philodendron è una pianta rampicante facile da curare.",
+    "toxic_to_pets": true,
+    "pet_friendly": false,
+    "max_height_cm": 180,
+    "growth_rate": "fast"
+  },
+  {
+    "name": "Orchidea",
+    "scientific_name": "Phalaenopsis",
+    "watering_frequency_days": 7,
+    "light_requirements": "indirect_bright",
+    "humidity_level": "high",
+    "difficulty": "hard",
+    "tips": [
+      "Annaffia con ghiaccio (3 cubetti a settimana)",
+      "Luce brillante ma non diretta",
+      "Non rinvasare durante la fioritura"
+    ],
+    "description": "Le orchidee Phalaenopsis sono eleganti e fioriscono per mesi.",
+    "toxic_to_pets": false,
+    "pet_friendly": true,
+    "max_height_cm": 60,
+    "growth_rate": "slow"
+  },
+  {
+    "name": "Aloe Vera",
+    "scientific_name": "Aloe barbadensis miller",
+    "watering_frequency_days": 21,
+    "light_requirements": "direct",
+    "humidity_level": "low",
+    "difficulty": "easy",
+    "tips": [
+      "Gel curativo per scottature",
+      "Poca acqua",
+      "Tanta luce"
+    ],
+    "description": "L'Aloe Vera è una pianta medicinale con molte proprietà benefiche.",
+    "toxic_to_pets": true,
+    "pet_friendly": false,
+    "max_height_cm": 60,
+    "growth_rate": "slow"
+  },
+  {
+    "name": "Palma Areca",
+    "scientific_name": "Dypsis lutescens",
+    "watering_frequency_days": 7,
+    "light_requirements": "indirect_bright",
+    "humidity_level": "high",
+    "difficulty": "medium",
+    "tips": [
+      "Nebulizza regolarmente",
+      "Ottima purificatrice d'aria",
+      "Evita il sole diretto"
+    ],
+    "description": "La Palma Areca è una pianta tropicale elegante e purificante.",
+    "toxic_to_pets": false,
+    "pet_friendly": true,
+    "max_height_cm": 200,
+    "growth_rate": "medium"
+  }
+]

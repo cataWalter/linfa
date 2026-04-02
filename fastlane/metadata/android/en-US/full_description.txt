@@ -1,0 +1,61 @@
+Linfa is your personal houseplant assistant. Track your plants, set care reminders, and watch them grow over time. Completely free, open source, and privacy-first.
+
+## Why Linfa?
+
+Houseplants need regular care: watering, fertilizing, repotting, leaf cleaning. It's easy to forget when you last watered a specific plant, especially when you have several.
+
+Existing apps like Planta, Blossom, and PictureThis are freemium: useful features are behind paywalls (€25-30/year), require accounts, and your data stays on their servers.
+
+Linfa is different:
+- **100% free** - no paywalls, no subscriptions
+- **Open source** - code is transparent, anyone can contribute
+- **Privacy-first** - all data stays on your device, no account required
+- **Offline-first** - works without internet connection
+- **Simple** - does one thing and does it well
+
+## Features
+
+### Core
+- Add plants with photos and basic information
+- Customizable reminders for each plant
+- Local push notifications - no server needed
+- Growth timeline with photos
+- Notes and observations for each plant
+
+### Organization
+- Group by room or location
+- Filter by plant type
+- Search by name
+- Sort by last check or name
+
+### Export
+- Export data to JSON
+- Export photos to gallery
+- Manual backup to personal cloud
+
+### Customization
+- Icons for reminder types
+- Colors for plant status
+- Customizable notification sounds
+- Light/dark theme
+
+## Plant Database
+
+Linfa includes a base database of common plants with care advice:
+
+| Plant | Watering | Light | Notes |
+|-------|----------|-------|-------|
+| Pothos | Every 7-10 days | Indirect | Very resilient |
+| Monstera | Every 7 days | Bright indirect | Loves humidity |
+| Sansevieria | Every 14-21 days | Any | Almost indestructible |
+| Ficus | Every 7-10 days | Bright indirect | Sensitive to changes |
+| Succulents | Every 14-21 days | Direct | Little water |
+| Fern | Every 3-5 days | Indirect | Loves humidity |
+
+## Privacy
+
+Linfa stores all data locally on your device. No accounts, no servers, no tracking. Your plant data belongs to you and stays with you.
+
+## Open Source
+
+Linfa is licensed under the MIT License. Source code is available on GitHub. Contributions are welcome!

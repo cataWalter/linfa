@@ -1,0 +1,61 @@
+Linfa è il tuo assistente personale per le piante domestiche. Tieni traccia delle tue piante, imposta promemoria per la cura e osservale crescere nel tempo. Completamente gratuita, open source e privacy-first.
+
+## Perché Linfa?
+
+Le piante domestiche richiedono cure regolari: annaffiatura, concimazione, rinvaso, pulizia delle foglie. È facile dimenticare quando si è annaffiata l'ultima volta una pianta specifica, soprattutto quando ne hai diverse.
+
+Le app esistenti come Planta, Blossom e PictureThis sono freemium: le feature più utili sono dietro paywall (€25-30/anno), richiedono account e i tuoi dati restano sui loro server.
+
+Linfa è diversa:
+- **100% gratuita** - niente paywall, niente abbonamenti
+- **Open source** - il codice è trasparente, chiunque può contribuire
+- **Privacy-first** - tutti i dati restano sul dispositivo, nessun account richiesto
+- **Offline-first** - funziona senza connessione internet
+- **Semplice** - fa una cosa sola e la fa bene
+
+## Funzionalità
+
+### Core
+- Aggiungi piante con foto e informazioni base
+- Promemoria personalizzabili per ogni pianta
+- Notifiche locali push - nessun server necessario
+- Timeline di crescita con foto
+- Note e osservazioni per ogni pianta
+
+### Organizzazione
+- Raggruppamento per stanza o posizione
+- Filtri per tipo di pianta
+- Ricerca per nome
+- Ordinamento per ultimo controllo o nome
+
+### Export
+- Esportazione dati in JSON
+- Esportazione foto in galleria
+- Backup manuale su cloud personale
+
+### Personalizzazione
+- Icone per tipo di promemoria
+- Colori per stato della pianta
+- Suoni di notifica personalizzabili
+- Tema chiaro/scuro
+
+## Database Piante
+
+Linfa include un database base di piante comuni con cure consigliate:
+
+| Pianta | Annaffiatura | Luce | Note |
+|--------|-------------|------|------|
+| Pothos | Ogni 7-10 giorni | Indiretta | Molto resistente |
+| Monstera | Ogni 7 giorni | Indiretta brillante | Ama l'umidità |
+| Sansevieria | Ogni 14-21 giorni | Qualsiasi | Quasi indistruttibile |
+| Ficus | Ogni 7-10 giorni | Indiretta brillante | Sensibile ai cambiamenti |
+| Succulente | Ogni 14-21 giorni | Diretta | Poco acqua |
+| Felce | Ogni 3-5 giorni | Indiretta | Ama l'umidità |
+
+## Privacy
+
+Linfa memorizza tutti i dati localmente sul tuo dispositivo. Nessun account, nessun server, nessun tracciamento. I dati delle tue piante appartengono a te e restano con te.
+
+## Open Source
+
+Linfa è distribuita con licenza MIT. Il codice sorgente è disponibile su GitHub. I contributi sono benvenuti!
