@@ -13,7 +13,7 @@ class PlantRepository {
 
   /// Get all active plants
   Future<List<Plant>> getAllPlants({bool includeArchived = false}) async {
-    var query = _db.plants.where().sortByCreatedAtDesc();
+    final query = _db.plants.where().sortByCreatedAtDesc();
     final plants = await query.findAll();
     if (!includeArchived) {
       return plants.where((p) => !p.isArchived).toList();
@@ -51,8 +51,7 @@ class PlantRepository {
     final plants = await _db.plants.where().findAll();
     return plants
         .where((p) =>
-            !p.isArchived &&
-            p.name.toLowerCase().contains(query.toLowerCase()))
+            !p.isArchived && p.name.toLowerCase().contains(query.toLowerCase()))
         .toList();
   }
 

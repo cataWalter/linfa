@@ -82,6 +82,7 @@ class _GrowthTimelineScreenState extends ConsumerState<GrowthTimelineScreen> {
                   },
                 ),
       floatingActionButton: FloatingActionButton(
+        heroTag: 'add_growth_entry_fab',
         onPressed: _addEntry,
         child: const Icon(Icons.add_a_photo),
       ),

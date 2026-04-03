@@ -14,7 +14,6 @@ import 'features/plants/edit_plant_screen.dart';
 import 'features/reminders/add_reminder_screen.dart';
 import 'features/growth/growth_timeline_screen.dart';
 import 'shared/providers/theme_provider.dart';
-import 'shared/providers/theme_provider.dart';
 
 /// Main app widget
 class LinfaApp extends ConsumerWidget {

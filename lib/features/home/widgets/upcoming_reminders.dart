@@ -66,17 +66,21 @@ class UpcomingRemindersWidget extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text(
-                        reminder.typeDisplayName,
-                        style: LinfaTypography.getTitleSmall(),
-                      ),
+                       Text(
+                         reminder.typeDisplayName,
+                         style: LinfaTypography.getTitleSmall(),
+                         maxLines: 1,
+                         overflow: TextOverflow.ellipsis,
+                       ),
                       if (reminder.plant.value != null)
-                        Text(
-                          reminder.plant.value!.name,
-                          style: LinfaTypography.getBodySmall().copyWith(
-                            color: LinfaColors.textSecondaryLight,
-                          ),
-                        ),
+                         Text(
+                           reminder.plant.value!.name,
+                           style: LinfaTypography.getBodySmall().copyWith(
+                             color: LinfaColors.textSecondaryLight,
+                           ),
+                           maxLines: 1,
+                           overflow: TextOverflow.ellipsis,
+                         ),
                     ],
                   ),
                 ),

@@ -54,21 +54,26 @@ class RemindersScreen extends ConsumerWidget {
                       size: 24,
                     ),
                   ),
-                  title: Text(
-                    reminder.typeDisplayName,
-                    style: LinfaTypography.getTitleSmall(),
-                  ),
+                   title: Text(
+                     reminder.typeDisplayName,
+                     style: LinfaTypography.getTitleSmall(),
+                     maxLines: 1,
+                     overflow: TextOverflow.ellipsis,
+                   ),
                   subtitle: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      if (reminder.plant.value != null)
-                        Text(reminder.plant.value!.name),
+                       if (reminder.plant.value != null)
+                         Text(
+                           reminder.plant.value!.name,
+                           maxLines: 1,
+                           overflow: TextOverflow.ellipsis,
+                         ),
                       Text('Ogni ${reminder.frequencyDays} giorni'),
                     ],
                   ),
-                  trailing: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.end,
+                  trailing: Row(
+                    mainAxisSize: MainAxisSize.min,
                     children: [
                       Text(
                         reminder.nextScheduled != null
@@ -79,7 +84,10 @@ class RemindersScreen extends ConsumerWidget {
                               ? LinfaColors.danger
                               : LinfaColors.textSecondaryLight,
                         ),
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
                       ),
+                      const SizedBox(width: 8),
                       Switch(
                         value: reminder.isEnabled,
                         onChanged: (_) {
@@ -100,6 +108,7 @@ class RemindersScreen extends ConsumerWidget {
         error: (e, _) => Center(child: Text('Errore: $e')),
       ),
       floatingActionButton: FloatingActionButton.extended(
+        heroTag: 'add_reminder_fab',
         onPressed: () {
           context.push(AppRoutes.addReminder);
         },

@@ -50,8 +50,9 @@ class _AddReminderScreenState extends ConsumerState<AddReminderScreen> {
             DateTime.now().add(Duration(days: _selectedFrequency.days));
 
       if (widget.plantId != null) {
+        // Get plant data if available
         final plantAsync = ref.read(plantProvider(widget.plantId!));
-        final plant = plantAsync.whenOrNull(data: (data) => data);
+        final plant = plantAsync.value;
         if (plant != null) {
           reminder.plant.value = plant;
         }

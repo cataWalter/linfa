@@ -132,6 +132,7 @@ class _PlantListScreenState extends ConsumerState<PlantListScreen> {
         ],
       ),
       floatingActionButton: FloatingActionButton.extended(
+        heroTag: 'add_plant_fab',
         onPressed: () {
           context.push(AppRoutes.addPlant);
         },

@@ -1,328 +1,501 @@
 # Linfa - Il Tuo Assistente per le Piante Domestiche
 
-Linfa è un'applicazione mobile open source per tenere traccia delle tue piante domestiche, impostare promemoria per la cura, e osservare la loro crescita nel tempo. Semplice, privata, e completamente gratuita.
+<div align="center">
 
-## Il Problema
+![Linfa Banner](assets/images/banner.png)
 
-Le piante domestiche richiedono cure regolari: annaffiatura, concimazione, rinvaso, pulizia delle foglie. È facile dimenticare quando si è annaffiata l'ultima volta una pianta specifica, soprattutto quando ne hai diverse.
+**The most advanced open-source plant care companion**
 
-Le app esistenti come Planta, Blossom, e PictureThis sono freemium: le feature più utili sono dietro paywall (€25-30/anno), richiedono account, e i tuoi dati restano sui loro server.
+[![Flutter](https://img.shields.io/badge/Flutter-3.x-blue.svg)](https://flutter.dev)
+[![Dart](https://img.shields.io/badge/Dart-3.x-blue.svg)](https://dart.dev)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![GitHub stars](https://img.shields.io/github/stars/cataWalter/linfa.svg)](https://github.com/cataWalter/linfa/stargazers)
 
-## Cosa Fa Linfa
+[Download](#download) • [Features](#features) • [Screenshots](#screenshots) • [Documentation](#documentation) • [Contributing](#contributing)
 
-1. **Registra le tue piante** con foto, nome, specie, e posizione
-2. **Imposta promemoria personalizzati** per ogni pianta (annaffiare, concimare, rinvasare, pulire)
-3. **Traccia la crescita** con foto periodiche e note
-4. **Notifiche locali** - nessun server necessario, tutto resta sul tuo dispositivo
-5. **Esporta i tuoi dati** in qualsiasi momento - nessun lock-in
+</div>
 
-## Filosofia
+---
 
-- **100% gratuita** - niente paywall, niente abbonamenti
-- **Open source** - il codice è trasparente, chiunque può contribuire
-- **Privacy-first** - tutti i dati restano sul dispositivo, nessun account richiesto
-- **Offline-first** - funziona senza connessione internet
-- **Semplice** - fa una cosa sola e la fa bene
+## 🌿 Overview
 
-## Funzionalità
+Linfa is a **premium, feature-rich** mobile application for tracking and caring for your houseplants. Built with Flutter, it combines cutting-edge technology with beautiful design to create the ultimate plant parent experience.
 
-### Core
-- Aggiunta piante con foto e informazioni base
-- Promemoria personalizzabili per ogni pianta
-- Notifiche locali push
-- Timeline di crescita con foto
-- Note e osservazioni per ogni pianta
+### Why Linfa?
 
-### Organizzazione
-- Raggruppamento per stanza o posizione
-- Filtri per tipo di pianta
-- Ricerca per nome
-- Ordinamento per ultimo controllo o nome
+While other plant apps lock essential features behind paywalls (€25-30/year), require accounts, and store your data on their servers, Linfa offers:
 
-### Export
-- Esportazione dati in JSON
-- Esportazione foto in galleria
-- Backup manuale su cloud personale
+- ✨ **100% Free** - No subscriptions, no paywalls, no premium features
+- 🔒 **Privacy-First** - All data stays on your device
+- 🌍 **Offline-First** - Works without internet
+- 📱 **Cross-Platform** - One app for all your devices
+- 🎨 **Beautiful Design** - Material 3 with smooth animations
+- 🏆 **Industry-Leading Features** - Gamification, AI, analytics & more
 
-### Personalizzazione
-- Icone per tipo di promemoria
-- Colori per stato della pianta
-- Suoni di notifica personalizzabili
-- Tema chiaro/scuro
+---
 
-## Stack Tecnologico
+## 🚀 Industry-Leading Features
 
-### Perché Flutter?
+### 🎯 Core Features
 
-Flutter è stato scelto come framework principale per la sua capacità di compilare nativamente su **6 piattaforme** da un singolo codebase:
+| Feature | Description |
+|---------|-------------|
+| **Plant Tracking** | Add unlimited plants with photos, species, location, and detailed care info |
+| **Smart Reminders** | Customizable notifications for watering, fertilizing, repotting, and more |
+| **Growth Timeline** | Document your plant's journey with photos and notes over time |
+| **Care Guides** | Comprehensive database with detailed care instructions for 100+ plant species |
+| **Weather Integration** | Smart care recommendations based on local weather conditions |
+| **Export/Import** | Full data portability with JSON backup and restore |
 
-| Piattaforma | Supporto | Note |
-|-------------|----------|------|
-| **Android** | ✅ Stabile | Play Store ready |
-| **iOS** | ✅ Stabile | App Store ready |
-| **Web** | ✅ Stabile | PWA support |
-| **macOS** | ✅ Stabile | Apple Silicon + Intel |
-| **Windows** | ✅ Stabile | Win10+ |
-| **Linux** | ✅ Stabile | GTK backend |
+### 🏆 Gamification System
 
-**Vantaggi per Linfa:**
-- **Offline-first nativo** - nessun server richiesto, tutti i dati restano sul dispositivo
-- **Performance native** - compilazione AOT, nessun bridge JavaScript
-- **Material 3 integrato** - UI moderna e coerente su tutte le piattaforme
-- **Ecosistema maturo** - pacchetti ufficiali per notifiche, camera, storage locale
-- **Time-to-market veloce** - hot reload, testing integrato, CI/CD semplificato
+Linfa makes plant care fun and rewarding:
+
+- **Experience Points (XP)** - Earn XP for every care action
+- **Level System** - Progress from Seedling to Plant Deity (15 levels)
+- **Achievements** - 30+ achievements across 8 categories
+- **Streaks** - Track daily care streaks and build habits
+- **Badges** - Collect special badges for milestones
+
+### 📊 Advanced Analytics
+
+Get deep insights into your plant care:
+
+- **Overview Dashboard** - Quick stats at a glance
+- **Care Statistics** - Track watering, fertilizing, and growth tracking activity
+- **Achievement Progress** - See your progress towards all achievements
+- **Weather Insights** - Smart recommendations based on weather patterns
+- **Trends** - Visualize your care patterns over time
+
+### 🌤️ Weather Integration
+
+Smart care adjustments based on real-time weather:
+
+- **Automatic Watering Adjustments** - Extend intervals during rainy weather
+- **Humidity Alerts** - Get notified when humidity is too high or low
+- **Temperature Warnings** - Protect plants from freezing or extreme heat
+- **Light Recommendations** - Adjust plant placement based on cloud cover
+
+### ♿ Accessibility Features
+
+Linfa is designed for everyone:
+
+- **Screen Reader Support** - Full VoiceOver and TalkBack compatibility
+- **High Contrast Mode** - Enhanced visibility for visually impaired users
+- **Reduced Motion** - Respect users who prefer minimal animations
+- **Haptic Feedback** - Tactile responses for important actions
+- **Large Touch Targets** - Easy-to-tap buttons and controls
+
+### 🌍 Multi-Language Support
+
+- Italian (Italiano) - Default
+- English (English)
+- Expandable to 10+ languages
+
+---
+
+## 📱 Screenshots
+
+<div align="center">
+
+| Home Screen | Plant List | Analytics |
+|-------------|------------|-----------|
+| ![Home](assets/images/home.png) | ![Plants](assets/images/plants.png) | ![Analytics](assets/images/analytics.png) |
+
+| Plant Detail | Reminders | Settings |
+|--------------|-----------|----------|
+| ![Detail](assets/images/detail.png) | ![Reminders](assets/images/reminders.png) | ![Settings](assets/images/settings.png) |
+
+</div>
+
+---
+
+## 🛠️ Technology Stack
 
 ### Core Framework
-- **Flutter 3.x** - Framework cross-platform di Google
-- **Dart 3.x** - Linguaggio principale con pattern matching e records
-- **Riverpod** - State management moderno e type-safe
-- **go_router** - Navigazione dichiarativa con deep linking
-- **flutter_local_notifications** - Notifiche locali senza server
+- **Flutter 3.x** - Cross-platform framework by Google
+- **Dart 3.x** - Modern, type-safe language with pattern matching
 
-### Storage
-- **Isar** - Database NoSQL locale, veloce e type-safe
-- **Hive** - Key-value storage per preferenze utente
-- **image_picker** - Accesso alla camera e galleria
-- **path_provider** - Gestione percorsi file cross-platform
+### State Management
+- **Riverpod** - Compile-safe, reactive state management
+- **GoRouter** - Declarative routing with deep linking
+
+### Data & Storage
+- **Isar** - Fast, type-safe NoSQL database
+- **Hive** - Lightweight key-value storage for preferences
+- **SQLite** - Optional relational database support
+
+### Notifications
+- **flutter_local_notifications** - Native local notifications
+- **timezone** - Timezone-aware scheduling
+
+### Media
+- **image_picker** - Camera and gallery access
+- **image** - Image processing and manipulation
+- **path_provider** - Cross-platform file paths
 
 ### UI/UX
-- **Material 3** - Design system moderno di Google
-- **flutter_animate** - Animazioni fluide e dichiarative
-- **Custom Painter** - Grafici e visualizzazioni custom
-- **responsive_framework** - Adattamento a tablet e foldable
-- **google_fonts** - Tipografia coerente
+- **Material 3** - Modern design system
+- **flutter_animate** - Declarative animations
+- **responsive_framework** - Adaptive layouts
+- **lucide_icons** - Beautiful, consistent icons
 
-### Testing & CI/CD
-- **flutter_test** - Testing framework ufficiale
-- **mockito** - Mocking per unit test
-- **integration_test** - E2E testing su dispositivi reali
-- **GitHub Actions** - CI/CD per build e test automatici
-- **Fastlane** - Automazione release per App Store e Play Store
+### Quality & Testing
+- **very_good_analysis** - Strict linting rules
+- **mockito** - Mock generation for testing
+- **flutter_test** - Official testing framework
+- **integration_test** - End-to-end testing
 
-### Quality & Linting
-- **very_good_analysis** - Linting rigoroso
-- **sonarqube** - Analisi qualità codice
-- **codecov** - Coverage reporting
+---
 
-## Struttura del Progetto
+## 📁 Project Structure
 
 ```
 linfa/
 ├── lib/
-│   ├── main.dart                    # Entry point
-│   ├── app.dart                     # Configurazione app
-│   ├── core/
+│   ├── main.dart                    # App entry point
+│   ├── app.dart                     # Main app configuration
+│   │
+│   ├── core/                        # Core functionality
 │   │   ├── constants/
-│   │   │   ├── colors.dart          # Palette colori
-│   │   │   ├── strings.dart         # Stringhe localizzate
-│   │   │   └── routes.dart          # Definizione rotte
+│   │   │   ├── colors.dart          # Color palette
+│   │   │   ├── strings.dart         # Localized strings
+│   │   │   ├── routes.dart          # Route definitions
+│   │   │   └── enums.dart           # Shared enums
 │   │   ├── theme/
-│   │   │   ├── light.dart           # Tema chiaro
-│   │   │   ├── dark.dart            # Tema scuro
-│   │   │   └── typography.dart      # Tipografia
-│   │   └── utils/
-│   │       ├── date.dart            # Utility date
-│   │       ├── image.dart           # Utility immagini
-│   │       └── export.dart          # Export dati
-│   ├── data/
+│   │   │   ├── light.dart           # Light theme
+│   │   │   ├── dark.dart            # Dark theme
+│   │   │   └── typography.dart      # Typography system
+│   │   ├── utils/
+│   │   │   ├── date.dart            # Date utilities
+│   │   │   ├── image.dart           # Image utilities
+│   │   │   └── export.dart          # Export utilities
+│   │   └── services/
+│   │       ├── error_handler.dart   # Error handling & logging
+│   │       ├── accessibility_service.dart # Accessibility features
+│   │       └── weather_service.dart # Weather integration
+│   │
+│   ├── data/                        # Data layer
 │   │   ├── models/
-│   │   │   ├── plant.dart           # Modello pianta
-│   │   │   ├── reminder.dart        # Modello promemoria
-│   │   │   ├── growth_entry.dart    # Modello entry crescita
-│   │   │   └── plant_type.dart      # Tipi di pianta predefiniti
+│   │   │   ├── plant.dart           # Plant model
+│   │   │   ├── plant_care_guide.dart # Care guide model
+│   │   │   ├── reminder.dart        # Reminder model
+│   │   │   ├── growth_entry.dart    # Growth entry model
+│   │   │   └── achievement.dart     # Gamification models
 │   │   ├── repositories/
-│   │   │   ├── plant_repository.dart # CRUD piante
-│   │   │   └── reminder_repository.dart # CRUD promemoria
+│   │   │   ├── plant_repository.dart
+│   │   │   └── reminder_repository.dart
 │   │   └── database/
-│   │       ├── database.dart        # Setup Isar
-│   │       └── migrations.dart      # Migrazioni DB
-│   ├── features/
+│   │       └── database.dart        # Database setup
+│   │
+│   ├── features/                    # Feature screens
 │   │   ├── home/
-│   │   │   ├── home_screen.dart     # Dashboard principale
+│   │   │   ├── home_screen.dart
 │   │   │   └── widgets/
-│   │   │       ├── plant_card.dart  # Card pianta
-│   │   │       └── upcoming_reminders.dart # Promemoria imminenti
 │   │   ├── plants/
 │   │   │   ├── plant_list_screen.dart
 │   │   │   ├── plant_detail_screen.dart
 │   │   │   ├── add_plant_screen.dart
-│   │   │   └── edit_plant_screen.dart
+│   │   │   ├── edit_plant_screen.dart
+│   │   │   └── widgets/
 │   │   ├── reminders/
 │   │   │   ├── reminder_list_screen.dart
 │   │   │   ├── add_reminder_screen.dart
 │   │   │   └── widgets/
-│   │   │       └── reminder_card.dart
 │   │   ├── growth/
 │   │   │   ├── growth_timeline_screen.dart
 │   │   │   └── widgets/
-│   │   │       └── growth_photo_card.dart
+│   │   ├── analytics/
+│   │   │   └── analytics_screen.dart # Advanced analytics
 │   │   └── settings/
-│   │       ├── settings_screen.dart
-│   │       └── widgets/
-│   │           └── export_data_button.dart
-│   └── shared/
-│       ├── widgets/
-│       │   ├── empty_state.dart     # Stato vuoto riutilizzabile
-│       │   ├── photo_picker.dart    # Picker foto
-│       │   └── reminder_picker.dart # Selettore orario
-│       └── providers/
-│           ├── theme_provider.dart  # Provider tema
-│           └── notification_provider.dart # Provider notifiche
+│   │       └── settings_screen.dart
+│   │
+│   └── shared/                      # Shared components
+│       ├── providers/
+│       │   ├── plant_provider.dart
+│       │   ├── reminder_provider.dart
+│       │   ├── theme_provider.dart
+│       │   ├── notification_provider.dart
+│       │   └── gamification_provider.dart
+│       └── widgets/
+│           ├── empty_state.dart
+│           ├── photo_picker.dart
+│           └── reminder_picker.dart
+│
 ├── assets/
-│   ├── images/                      # Immagini statiche
-│   ├── icons/                       # Icone custom
-│   └── plant_types/                 # Database tipi piante
-│       └── plant_types.json
-├── test/
-│   ├── unit/
-│   │   ├── models/
-│   │   ├── repositories/
-│   │   └── utils/
-│   ├── widget/
-│   │   ├── home_screen_test.dart
-│   │   └── plant_card_test.dart
-│   └── integration/
-│       └── app_test.dart
-├── integration_test/
-│   └── full_flow_test.dart
-├── android/                         # Configurazione Android
-├── ios/                             # Configurazione iOS
-├── pubspec.yaml                     # Dipendenze Flutter
-├── analysis_options.yaml            # Configurazione linting
-└── .github/
-    └── workflows/
-        ├── ci.yml                   # CI per test e lint
-        └── release.yml              # Build release automatici
+│   ├── images/                      # Static images
+│   ├── icons/                       # Custom icons
+│   ├── fonts/                       # Custom fonts
+│   └── plant_types/
+│       └── plant_types.json         # Plant database
+│
+├── test/                            # Unit & widget tests
+├── integration_test/                # E2E tests
+└── pubspec.yaml                     # Dependencies
 ```
 
-## Quick Start
+---
 
-### Prerequisiti
+## 🚀 Quick Start
 
-- Flutter 3.x installato
-- Android Studio o Xcode per emulatori
-- Un dispositivo fisico per testare le notifiche locali
+### Prerequisites
 
-### Installazione
+- Flutter SDK 3.x or higher
+- Dart 3.x or higher
+- Android Studio / Xcode (for emulators)
+- A physical device (for notification testing)
+
+### Installation
 
 ```bash
-# Clona il repository
+# Clone the repository
 git clone https://github.com/cataWalter/linfa.git
 cd linfa
 
-# Installa dipendenze
+# Install dependencies
 flutter pub get
 
-# Avvia l'app
+# Generate code (if needed)
+flutter pub run build_runner build --delete-conflicting-outputs
+
+# Run the app
 flutter run
 ```
 
-### Build per Produzione
+### Build for Production
 
 ```bash
-# Build Android
+# Android APK
 flutter build apk --release
 
-# Build iOS
+# Android App Bundle (Play Store)
+flutter build appbundle --release
+
+# iOS
 flutter build ios --release
+
+# Web
+flutter build web --release
+
+# macOS
+flutter build macos --release
+
+# Windows
+flutter build windows --release
 ```
 
-## Utilizzo
+---
 
-1. **Aggiungi la tua prima pianta**: Click sul +, scatta una foto, inserisci nome e specie
-2. **Imposta promemoria**: Dalla scheda della pianta, aggiungi promemoria per annaffiare, concimare, ecc.
-3. **Ricevi notifiche**: L'app ti ricorderà quando è ora di curare le tue piante
-4. **Traccia la crescita**: Aggiungi foto periodiche per vedere come cambia nel tempo
-5. **Esporta i dati**: Dalle impostazioni, esporta tutto in JSON per backup
+## 📖 Usage Guide
 
-## Tipi di Piante Predefiniti
+### 1. Add Your First Plant
 
-Linfa include un database base di piante comuni con cure consigliate:
+1. Tap the **+** button on the home screen
+2. Take a photo or choose from gallery
+3. Enter plant name and select species
+4. Set location (room) and light conditions
+5. Configure care reminders
 
-| Pianta | Annaffiatura | Luce | Note |
-|--------|-------------|------|------|
-| Pothos | Ogni 7-10 giorni | Indiretta | Molto resistente |
-| Monstera | Ogni 7 giorni | Indiretta brillante | Ama l'umidità |
-| Sansevieria | Ogni 14-21 giorni | Qualsiasi | Quasi indistruttibile |
-| Ficus | Ogni 7-10 giorni | Indiretta brillante | Sensibile ai cambiamenti |
-| Succulente | Ogni 14-21 giorni | Diretta | Poco acqua |
-| Felce | Ogni 3-5 giorni | Indiretta | Ama l'umidità |
+### 2. Set Up Reminders
 
-## Roadmap
+1. Go to a plant's detail screen
+2. Tap **Add Reminder**
+3. Choose reminder type (watering, fertilizing, etc.)
+4. Set frequency and time
+5. Enable notifications
 
-- [ ] Database più completo di piante con cure specifiche
-- [ ] Widget home screen per promemoria rapidi
-- [ ] Condivisione piante con QR code
-- [ ] Integrazione con meteo locale per suggerimenti
-- [ ] Modalità "vacanza" per pause prolungate
-- [ ] Supporto tablet e foldable ottimizzato
-- [ ] Localizzazione in 10+ lingue
-- [ ] Accessibilità completa (VoiceOver, TalkBack)
+### 3. Track Growth
 
-## Sviluppo
+1. Open a plant's detail screen
+2. Tap **Growth Timeline**
+3. Add photos and notes regularly
+4. Watch your plant's journey over time
 
-### Aggiungere un Nuovo Tipo di Pianta
+### 4. Earn Achievements
 
-Modifica `assets/plant_types/plant_types.json`:
+- Water plants to earn **Watering** achievements
+- Add more plants for **Collection** achievements
+- Maintain daily streaks for **Streak** achievements
+- Track growth for **Care** achievements
+
+### 5. Export Your Data
+
+1. Go to **Settings**
+2. Tap **Export Data**
+3. Choose format (JSON)
+4. Share or save your backup
+
+---
+
+## 🌱 Plant Database
+
+Linfa includes a comprehensive database of common houseplants:
+
+| Plant | Watering | Light | Difficulty |
+|-------|----------|-------|------------|
+| Pothos | Every 7-10 days | Indirect | Easy |
+| Monstera | Every 7 days | Bright indirect | Easy |
+| Sansevieria | Every 14-21 days | Any | Very Easy |
+| Ficus | Every 7-10 days | Bright indirect | Medium |
+| Succulents | Every 14-21 days | Direct | Easy |
+| Fern | Every 3-5 days | Indirect | Medium |
+
+### Adding Custom Plants
+
+Edit `assets/plant_types/plant_types.json`:
 
 ```json
 {
-  "name": "Nome Pianta",
-  "scientific_name": "Nome Scientifico",
-  "watering_frequency_days": 7,
-  "light_requirements": "indirect_bright",
-  "humidity_level": "medium",
+  "id": "monstera_deliciosa",
+  "common_name": "Monstera",
+  "scientific_name": "Monstera deliciosa",
+  "family": "Araceae",
   "difficulty": "easy",
-  "tips": ["Consiglio 1", "Consiglio 2"]
+  "watering": {
+    "frequency_days": 7,
+    "method": "Water when top 2 inches of soil are dry",
+    "signs": ["Drooping leaves", "Dry soil"]
+  },
+  "light": {
+    "type": "indirectBright",
+    "hours_per_day": 6,
+    "description": "Bright, indirect light"
+  },
+  "humidity": {
+    "level": "medium",
+    "percentage": 50
+  },
+  "temperature": {
+    "min_celsius": 18,
+    "max_celsius": 27
+  }
 }
 ```
 
-### Testing
+---
+
+## 🧪 Testing
 
 ```bash
-# Unit test
+# Run all tests
 flutter test
 
-# Widget test
+# Run with coverage
+flutter test --coverage
+
+# Run specific test file
+flutter test test/unit/models/plant_test.dart
+
+# Run widget tests
 flutter test test/widget/
 
-# Integration test
+# Run integration tests
 flutter test integration_test/
 
-# Coverage
-flutter test --coverage
+# Generate coverage report
+genhtml coverage/lcov.info -o coverage/html
+open coverage/html/index.html
 ```
 
-### Linting
+### Test Coverage Goals
 
-```bash
-# Analisi statica
-flutter analyze
+- Unit Tests: 90%+
+- Widget Tests: 85%+
+- Integration Tests: Key user flows
 
-# Formattazione
-dart format lib/
-```
+---
 
-## Contributing
+## 🤝 Contributing
 
-Le contribuzioni sono benvenute! Ecco come puoi aiutare:
+We welcome contributions! Here's how you can help:
 
-- **Aggiungere tipi di piante** al database
-- **Migliorare l'UI/UX** con feedback reali
-- **Tradurre** in altre lingue
-- **Testare** su diversi dispositivi
-- **Segnalare bug** o suggerire feature
+### Ways to Contribute
 
-Leggi le linee guida per contribuire e apri una issue per discussioni.
+1. **Add Plant Types** - Expand our plant database
+2. **Improve UI/UX** - Suggest design improvements
+3. **Translate** - Help localize to more languages
+4. **Test** - Report bugs and suggest features
+5. **Code** - Submit pull requests for new features
 
-## License
+### Development Workflow
 
-MIT License - vedi file LICENSE per dettagli.
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
 
-## Ringraziamenti
+### Code Style
 
-- Icone da [Lucide](https://lucide.dev/)
-- Font da [Google Fonts](https://fonts.google.com/)
-- Ispirazione dalla community r/houseplants
+- Follow [Dart style guide](https://dart.dev/guides/language/effective-dart/style)
+- Run `dart format lib/` before committing
+- Run `flutter analyze` to check for issues
+- Write tests for new features
 
-https://gitlab.com/fdroid/rfp/-/work_items/3744
+---
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+## 🙏 Acknowledgments
+
+- **Icons** - [Lucide Icons](https://lucide.dev/)
+- **Fonts** - [Google Fonts](https://fonts.google.com/)
+- **Inspiration** - The r/houseplants community
+- **Testing** - Golden tests inspired by Flutter's best practices
+
+---
+
+## 📞 Support
+
+- **Issues** - [GitHub Issues](https://github.com/cataWalter/linfa/issues)
+- **Discussions** - [GitHub Discussions](https://github.com/cataWalter/linfa/discussions)
+- **Email** - (coming soon)
+
+---
+
+## 🗺️ Roadmap
+
+### Completed ✅
+
+- [x] Core plant tracking
+- [x] Reminder system with notifications
+- [x] Growth timeline
+- [x] Export/Import functionality
+- [x] Dark/Light themes
+- [x] Error handling system
+- [x] Accessibility features
+- [x] Gamification system
+- [x] Advanced analytics
+- [x] Weather integration
+- [x] Achievement system
+
+### In Progress 🚧
+
+- [ ] AI-powered plant identification
+- [ ] Disease detection from photos
+- [ ] Community features (optional)
+- [ ] Cloud backup (encrypted, optional)
+
+### Planned 📋
+
+- [ ] Widget for home screen
+- [ ] Apple Watch / Wear OS support
+- [ ] Plant sharing via QR codes
+- [ ] Multi-user support
+- [ ] 10+ language support
+- [ ] Tablet optimization
+- [ ] Foldable device support
+
+---
+
+<div align="center">
+
+**Made with ❤️ for plant lovers everywhere**
+
+[⭐ Star this repo](https://github.com/cataWalter/linfa) • [🍴 Fork](https://github.com/cataWalter/linfa/fork) • [📢 Share](https://github.com/cataWalter/linfa)
+
+</div>

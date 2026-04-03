@@ -7,10 +7,10 @@ import '../../core/constants/strings.dart';
 import '../../core/constants/routes.dart';
 import '../../core/theme/typography.dart';
 import '../../core/utils/date.dart';
+import '../../data/models/plant.dart';
 import '../../shared/providers/plant_provider.dart';
 import '../../shared/providers/reminder_provider.dart';
 import '../../shared/widgets/empty_state.dart';
-import '../../data/models/plant.dart';
 import 'widgets/plant_card.dart';
 import 'widgets/upcoming_reminders.dart';
 
@@ -39,6 +39,11 @@ final plantHealthSummaryProvider =
   }
 
   return summary;
+});
+
+final plantRoomsProvider = FutureProvider<List<String>>((ref) async {
+  final repository = ref.watch(plantRepositoryProvider);
+  return repository.getAllRooms();
 });
 
 class HomeScreen extends ConsumerStatefulWidget {
@@ -76,12 +81,12 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
     );
   }
 
-  void _showAnalytics(BuildContext context) {
+  void _showAnalytics() {
     showModalBottomSheet(
       context: context,
       isScrollControlled: true,
       backgroundColor: Colors.transparent,
-      builder: (context) => _AnalyticsBottomSheet(ref: ref),
+      builder: (context) => const _AnalyticsBottomSheet(),
     );
   }
 
@@ -269,6 +274,8 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
                         fontSize: 28,
                         fontWeight: FontWeight.bold,
                       ),
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
                     ).animate().fadeIn(duration: 400.ms).slideX(begin: -0.1),
                     const SizedBox(height: 4),
                     Text(
@@ -279,6 +286,8 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
                             .onSurface
                             .withOpacity(0.6),
                       ),
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
                     ).animate().fadeIn(delay: 100.ms, duration: 400.ms),
                   ],
                 ),
@@ -392,7 +401,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
           child: _QuickActionCard(
             icon: Icons.analytics_outlined,
             label: 'Statistiche',
-            onTap: () => _showAnalytics(context),
+            onTap: () => _showAnalytics(),
             color: LinfaColors.accent,
           ),
         ),
@@ -663,17 +672,19 @@ class _HealthIndicator extends StatelessWidget {
   }
 }
 
-class _AnalyticsBottomSheet extends StatelessWidget {
-  final WidgetRef ref;
-
-  const _AnalyticsBottomSheet({required this.ref});
+class _AnalyticsBottomSheet extends ConsumerWidget {
+  const _AnalyticsBottomSheet();
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     final plantsAsync = ref.watch(plantsProvider);
     final plants = plantsAsync.valueOrNull ?? [];
     final remindersAsync = ref.watch(upcomingRemindersProvider);
     final reminders = remindersAsync.valueOrNull ?? [];
+    final healthSummaryAsync = ref.watch(plantHealthSummaryProvider);
+    final healthSummary = healthSummaryAsync.valueOrNull;
+    final roomsAsync = ref.watch(plantRoomsProvider);
+    final rooms = roomsAsync.valueOrNull ?? [];
 
     int wateredToday = 0;
     for (final plant in plants) {
@@ -749,7 +760,7 @@ class _AnalyticsBottomSheet extends StatelessWidget {
                   _buildStatItem(
                     context,
                     'Piante Sane',
-                    (healthSummary?['healthy'] ?? 0).toString(),
+                    (getHealthSummary(context)?['healthy'] ?? 0).toString(),
                     Icons.favorite,
                     LinfaColors.healthy,
                   ),
@@ -774,8 +785,11 @@ class _AnalyticsBottomSheet extends StatelessWidget {
     );
   }
 
-  Map<String, int>? get healthSummary =>
-      ref.read(plantHealthSummaryProvider).valueOrNull;
+  Map<String, int>? getHealthSummary(BuildContext context) {
+    return ProviderScope.containerOf(context)
+        .read(plantHealthSummaryProvider)
+        .valueOrNull;
+  }
 
   Widget _buildStatItem(
     BuildContext context,
