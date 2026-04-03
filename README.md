@@ -324,3 +324,5 @@ MIT License - vedi file LICENSE per dettagli.
 - Icone da [Lucide](https://lucide.dev/)
 - Font da [Google Fonts](https://fonts.google.com/)
 - Ispirazione dalla community r/houseplants
+
+https://gitlab.com/fdroid/rfp/-/work_items/3744

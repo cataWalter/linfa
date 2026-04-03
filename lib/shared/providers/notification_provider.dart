@@ -29,7 +29,11 @@ class NotificationNotifier extends StateNotifier<NotificationSettings> {
     _init();
   }
 
-  final FlutterLocalNotificationsPlugin _notifications =
+  /// Test constructor that skips platform-specific initialization
+  @visibleForTesting
+  NotificationNotifier.test() : super(const NotificationSettings(enabled: true));
+
+  late final FlutterLocalNotificationsPlugin _notifications =
       FlutterLocalNotificationsPlugin();
 
   static const String _settingsBoxName = 'notification_settings';

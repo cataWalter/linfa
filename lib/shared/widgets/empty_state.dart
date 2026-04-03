@@ -81,9 +81,9 @@ class EmptyState extends StatelessWidget {
                 ],
               ),
             ).animate().scale(
-              duration: const Duration(milliseconds: 600),
-              curve: Curves.easeOutBack,
-            ),
+                  duration: const Duration(milliseconds: 600),
+                  curve: Curves.easeOutBack,
+                ),
             const SizedBox(height: 24),
             Text(
               title,
@@ -107,7 +107,8 @@ class EmptyState extends StatelessWidget {
                 icon: const Icon(Icons.add),
                 label: Text(actionLabel!),
                 style: ElevatedButton.styleFrom(
-                  padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
                 ),
               ).animate().fadeIn(delay: const Duration(milliseconds: 300)),
             ],
@@ -125,62 +126,79 @@ class SkeletonLoader extends StatelessWidget {
     this.width = double.infinity,
     this.height = 16,
     this.borderRadius = 8,
+    this.shimmer = true,
   });
 
   final double width;
   final double height;
   final double borderRadius;
+  final bool shimmer;
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    final container = Container(
       width: width,
       height: height,
       decoration: BoxDecoration(
         color: Theme.of(context).colorScheme.surfaceContainerHighest,
         borderRadius: BorderRadius.circular(borderRadius),
       ),
-    ).animate(
-      onPlay: (controller) => controller.repeat(reverse: true),
-    ).shimmer(
-      duration: const Duration(milliseconds: 1500),
-      color: Theme.of(context).colorScheme.surfaceContainerHighest.withOpacity(0.5),
     );
+
+    if (shimmer) {
+      return container
+          .animate(
+            onPlay: (controller) => controller.repeat(reverse: true),
+          )
+          .shimmer(
+            duration: const Duration(milliseconds: 1500),
+            color: Theme.of(context)
+                .colorScheme
+                .surfaceContainerHighest
+                .withOpacity(0.5),
+          );
+    }
+
+    return container;
   }
 }
 
 /// Card skeleton for plant cards
 class PlantCardSkeleton extends StatelessWidget {
-  const PlantCardSkeleton({super.key});
+  const PlantCardSkeleton({super.key, this.shimmer = true});
+
+  final bool shimmer;
 
   @override
   Widget build(BuildContext context) {
-    return Card(
-      clipBehavior: Clip.antiAlias,
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          // Photo placeholder
-          Expanded(
-            child: Container(
+    return SizedBox(
+      height: 240, // Fixed height like a typical card
+      child: Card(
+        clipBehavior: Clip.antiAlias,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            // Photo placeholder
+            Container(
+              height: 140, // Fixed height for photo area
               color: Theme.of(context).colorScheme.surfaceContainerHighest,
             ),
-          ),
-          // Info skeleton
-          Padding(
-            padding: const EdgeInsets.all(12),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                const SkeletonLoader(height: 16, width: 80),
-                const SizedBox(height: 8),
-                const SkeletonLoader(height: 12, width: 60),
-                const SizedBox(height: 12),
-                const SkeletonLoader(height: 10, width: 50),
-              ],
+            // Info skeleton
+            Padding(
+              padding: const EdgeInsets.all(12),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  SkeletonLoader(height: 16, width: 80, shimmer: shimmer),
+                  const SizedBox(height: 8),
+                  SkeletonLoader(height: 12, width: 60, shimmer: shimmer),
+                  const SizedBox(height: 12),
+                  SkeletonLoader(height: 10, width: 50, shimmer: shimmer),
+                ],
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
@@ -188,21 +206,34 @@ class PlantCardSkeleton extends StatelessWidget {
 
 /// Stats card skeleton
 class StatsCardSkeleton extends StatelessWidget {
-  const StatsCardSkeleton({super.key});
+  const StatsCardSkeleton({super.key, this.shimmer = true});
+
+  final bool shimmer;
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    final container = Container(
       height: 120,
       decoration: BoxDecoration(
         color: Theme.of(context).colorScheme.surfaceContainerHighest,
         borderRadius: BorderRadius.circular(20),
       ),
-    ).animate(
-      onPlay: (controller) => controller.repeat(reverse: true),
-    ).shimmer(
-      duration: const Duration(milliseconds: 1500),
-      color: Theme.of(context).colorScheme.surfaceContainerHighest.withOpacity(0.5),
     );
+
+    if (shimmer) {
+      return container
+          .animate(
+            onPlay: (controller) => controller.repeat(reverse: true),
+          )
+          .shimmer(
+            duration: const Duration(milliseconds: 1500),
+            color: Theme.of(context)
+                .colorScheme
+                .surfaceContainerHighest
+                .withOpacity(0.5),
+          );
+    }
+
+    return container;
   }
 }

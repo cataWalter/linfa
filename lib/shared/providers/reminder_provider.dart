@@ -1,5 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:isar/isar.dart';
 import '../../data/database/database.dart';
 import '../../data/models/reminder.dart';
 import '../../data/repositories/reminder_repository.dart';
@@ -55,6 +56,13 @@ class RemindersNotifier extends StateNotifier<AsyncValue<List<Reminder>>> {
 
   final ReminderRepository _repository;
   final NotificationNotifier _notificationNotifier;
+
+  /// Test constructor that skips initialization
+  @visibleForTesting
+  RemindersNotifier._test()
+      : _repository = _TestReminderRepository(),
+        _notificationNotifier = NotificationNotifier.test(),
+        super(AsyncValue.data([]));
 
   /// Load all reminders
   Future<void> loadReminders() async {
@@ -182,5 +190,77 @@ class RemindersNotifier extends StateNotifier<AsyncValue<List<Reminder>>> {
     } catch (e) {
       debugPrint('Error rescheduling notifications: $e');
     }
+  }
+}
+
+/// Test implementation of ReminderRepository for testing purposes
+@visibleForTesting
+class _TestReminderRepository implements ReminderRepository {
+  @override
+  late final DatabaseService databaseService;
+
+  _TestReminderRepository() : databaseService = DatabaseService.test(_TestMockIsar());
+
+  @override
+  Future<List<Reminder>> getAllReminders() async => [];
+
+  @override
+  Future<List<Reminder>> getRemindersForPlant(int plantId) async => [];
+
+  @override
+  Future<List<Reminder>> getActiveReminders() async => [];
+
+  @override
+  Future<List<Reminder>> getOverdueReminders() async => [];
+
+  @override
+  Future<List<Reminder>> getTodayReminders() async => [];
+
+  @override
+  Future<List<Reminder>> getUpcomingReminders() async => [];
+
+  @override
+  Future<Reminder?> getReminder(int id) async => null;
+
+  @override
+  Future<int> addReminder(Reminder reminder) async => 0;
+
+  @override
+  Future<void> updateReminder(Reminder reminder) async {}
+
+  @override
+  Future<void> deleteReminder(int id) async {}
+
+  @override
+  Future<void> toggleEnabled(int id) async {}
+
+  @override
+  Future<void> markTriggered(int id) async {}
+
+  @override
+  Future<int> getReminderCount() async => 0;
+
+  @override
+  Future<List<Map<String, dynamic>>> exportAllReminders() async => [];
+
+  @override
+  Future<void> importReminders(List<Map<String, dynamic>> remindersJson) async {}
+}
+
+/// Minimal mock Isar for testing
+class _TestMockIsar implements Isar {
+  @override
+  IsarCollection<T> collection<T>() {
+    throw UnimplementedError('Mock Isar collection not implemented');
+  }
+
+  @override
+  Future<T> writeTxn<T>(Future<T> Function() callback, {bool silent = false}) async {
+    return callback();
+  }
+
+  @override
+  dynamic noSuchMethod(Invocation invocation) {
+    throw UnimplementedError('MockIsar.${invocation.memberName} not implemented');
   }
 }

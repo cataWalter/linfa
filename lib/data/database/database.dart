@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:isar/isar.dart';
 import 'package:path_provider/path_provider.dart';
 import '../models/plant.dart';
@@ -6,17 +7,24 @@ import '../models/growth_entry.dart';
 
 /// Database service for Isar
 class DatabaseService {
-  DatabaseService._();
+  DatabaseService._() : _testIsar = null;
+
+  /// Test constructor for injecting mock Isar instances
+  @visibleForTesting
+  DatabaseService.test(Isar testIsar) : _testIsar = testIsar;
 
   static final DatabaseService instance = DatabaseService._();
 
   static Isar? _isar;
+  final Isar? _testIsar;
 
   /// Check if database is initialized
-  bool get isInitialized => _isar != null && _isar!.isOpen;
+  bool get isInitialized =>
+      _testIsar != null || (_isar != null && _isar!.isOpen);
 
   /// Get Isar instance
   Isar get isar {
+    if (_testIsar != null) return _testIsar!;
     final db = _isar;
     if (db == null || !db.isOpen) {
       throw StateError('Database not initialized. Call init() first.');

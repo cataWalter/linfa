@@ -1,0 +1,96 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_test/flutter_test.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:linfa/features/reminders/reminder_list_screen.dart';
+import 'package:linfa/core/constants/strings.dart';
+import 'package:linfa/shared/providers/reminder_provider.dart';
+import 'package:linfa/data/models/reminder.dart';
+import 'package:linfa/data/models/plant.dart';
+
+void main() {
+  group('RemindersScreen', () {
+    Reminder createReminder({
+      int id = 1,
+      String type = 'watering',
+      bool isEnabled = true,
+      DateTime? nextScheduled,
+    }) {
+      final plant = Plant()
+        ..id = 1
+        ..name = 'Monstera'
+        ..createdAt = DateTime.now();
+
+      return Reminder()
+        ..id = id
+        ..type = type
+        ..frequencyDays = 7
+        ..time = DateTime.now()
+        ..isEnabled = isEnabled
+        ..nextScheduled = nextScheduled ?? DateTime.now().add(const Duration(days: 1))
+        ..plant.value = plant;
+    }
+
+    testWidgets('renders without crashing', (tester) async {
+      await tester.pumpWidget(
+        ProviderScope(
+          overrides: [
+            remindersProvider.overrideWith((ref) => AsyncValue.data([])),
+          ],
+          child: const MaterialApp(
+            home: RemindersScreen(),
+          ),
+        ),
+      );
+
+      expect(find.byType(RemindersScreen), findsOneWidget);
+    });
+
+    testWidgets('displays app bar with reminders title', (tester) async {
+      await tester.pumpWidget(
+        ProviderScope(
+          overrides: [
+            remindersProvider.overrideWith((ref) => AsyncValue.data([])),
+          ],
+          child: const MaterialApp(
+            home: RemindersScreen(),
+          ),
+        ),
+      );
+
+      await tester.pumpAndSettle();
+
+      expect(find.text(AppStrings.reminders), findsOneWidget);
+    });
+
+    testWidgets('shows empty state when no reminders', (tester) async {
+      await tester.pumpWidget(
+        ProviderScope(
+          overrides: [
+            remindersProvider.overrideWith((ref) => AsyncValue.data([])),
+          ],
+          child: const MaterialApp(
+            home: RemindersScreen(),
+          ),
+        ),
+      );
+      await tester.pumpAndSettle();
+
+      expect(find.textContaining('Nessun promemoria'), findsOneWidget);
+    });
+
+    testWidgets('shows loading state', (tester) async {
+      await tester.pumpWidget(
+        ProviderScope(
+          overrides: [
+            remindersProvider.overrideWith((ref) => const AsyncValue.loading()),
+          ],
+          child: const MaterialApp(
+            home: RemindersScreen(),
+          ),
+        ),
+      );
+
+      expect(find.byType(CircularProgressIndicator), findsOneWidget);
+    });
+  });
+}
