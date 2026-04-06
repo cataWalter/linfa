@@ -19,7 +19,7 @@
 
 ## 🌿 Overview
 
-Linfa is a **premium, feature-rich** mobile application for tracking and caring for your houseplants. Built with Flutter, it combines cutting-edge technology with beautiful design to create the ultimate plant parent experience.
+**F-Droid submission pending** - Linfa is a **premium, feature-rich** mobile application for tracking and caring for your houseplants. Built with Flutter, it combines cutting-edge technology with beautiful design to create the ultimate plant parent experience.
 
 ### Why Linfa?
 
